@@ -103,7 +103,7 @@ ecommerce/              # Projet principal Django
 ![Page d'accueil](image.png)
 
 ### Détail produit
-![Détail produit](image-1.png)
+![Détail produit](image-3.png)
 
 ### Panier d'achat
 ![Panier](image-2.png)
