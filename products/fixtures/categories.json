@@ -1,0 +1,52 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Multitools",
+      "slug": "multitools",
+      "description": "Outils multifonctions compacts et polyvalents pour tous vos besoins quotidiens",
+      "icon": "fas fa-tools"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Éclairage",
+      "slug": "eclairage",
+      "description": "Lampes torches, frontales et accessoires d'éclairage pour vos aventures",
+      "icon": "fas fa-lightbulb"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "Équipement Outdoor",
+      "slug": "equipement-outdoor",
+      "description": "Tout l'équipement nécessaire pour vos randonnées et activités en plein air",
+      "icon": "fas fa-campground"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "EDC (Everyday Carry)",
+      "slug": "edc",
+      "description": "Accessoires et outils pratiques à transporter au quotidien",
+      "icon": "fas fa-wallet"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "Sacs et Stockage",
+      "slug": "sacs-stockage",
+      "description": "Sacs, pochettes et solutions de rangement pour votre matériel",
+      "icon": "fas fa-shopping-bag"
+    }
+  }
+]

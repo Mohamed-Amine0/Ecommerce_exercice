@@ -1,0 +1,449 @@
+/* Styles généraux */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Thème GearEdge - couleurs outdoor et outils */
+:root {
+    --gear-green: #2c7744; /* Vert forêt */
+    --gear-dark: #343a40; /* Noir de base */
+    --gear-orange: #e67e22; /* Orange équipement */
+    --gear-silver: #95a5a6; /* Gris métal */
+}
+
+.navbar-dark {
+    background-color: var(--gear-dark) !important;
+}
+
+/* Styles cartes produits */
+.product-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--gear-green);
+    margin-top: 1rem;
+}
+
+.description {
+    min-height: 60px;
+    color: #6c757d;
+}
+
+/* Style page détail produit */
+.product-detail {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.product-detail-img {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Style header */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--gear-orange) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--gear-orange);
+}
+
+/* Style footer */
+footer {
+    margin-top: auto;
+    background-color: var(--gear-dark) !important;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .product-detail .row {
+        flex-direction: column;
+    }
+}
+
+/* Styles des boutons GearEdge */
+.btn-success {
+    background-color: var(--gear-green) !important;
+    border-color: var(--gear-green) !important;
+}
+
+.btn-outline-primary {
+    color: var(--gear-dark);
+    border-color: var(--gear-dark);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--gear-dark);
+    border-color: var(--gear-dark);
+    color: white;
+}
+
+h1, h2, h3 {
+    color: var(--gear-dark);
+}
+
+h1 {
+    border-bottom: 3px solid var(--gear-orange);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Styles pour les sections */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--gear-orange);
+}
+
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title:not(.text-center)::after {
+    left: 0;
+    transform: none;
+}
+
+/* Style pour les produits en vedette */
+.featured-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.featured-card {
+    position: relative;
+    border: 1px solid rgba(230, 126, 34, 0.3);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--gear-orange);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 2;
+    border-bottom-left-radius: 8px;
+}
+
+.product-category {
+    margin-bottom: 10px;
+}
+
+.product-category-link {
+    font-size: 0.8rem;
+    color: var(--gear-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.product-category-link:hover {
+    text-decoration: underline;
+    color: var(--gear-dark);
+}
+
+/* Style pour les cartes catégories */
+.category-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+    color: var(--gear-orange);
+    margin-bottom: 1rem;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(44, 119, 68, 0.2);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .icon-circle {
+    background-color: var(--gear-green);
+    border-color: var(--gear-green);
+    transform: scale(1.1);
+}
+
+.category-card:hover .icon-circle i {
+    color: white;
+}
+
+.category-subtitle {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+}
+
+.category-card:hover .category-btn {
+    opacity: 1;
+    background-color: var(--gear-dark);
+    color: white;
+    padding: 0.5rem 2rem;
+}
+
+.category-card .btn {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover .btn {
+    opacity: 1;
+    background-color: var(--gear-dark);
+    color: white;
+}
+
+/* Style pour les produits à la une */
+.featured-card {
+    border: 1px solid rgba(230, 126, 34, 0.3);
+}
+
+/* Styles pour le panier */
+.cart-thumbnail {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.cart-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+table.table td {
+    vertical-align: middle;
+}
+
+.product-category-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    background-color: #f8f9fa;
+    color: var(--gear-green);
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.product-category-link:hover {
+    background-color: var(--gear-green);
+    color: white;
+}
+
+/* Toast notifications */
+.toast {
+    opacity: 1;
+    border: none;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+    width: 350px;
+    max-width: 100%;
+    animation: fadeInRight 0.5s ease-in-out;
+}
+
+.toast-header.bg-success {
+    background-color: var(--gear-green) !important;
+}
+
+.toast-header.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.toast-header.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.toast-header.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.related-products h3 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.related-products h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--gear-green);
+}
+
+/* Style pour la section hero */
+.hero-section {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1464198016405-33fd4527b89d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gear-dark) 0%, rgba(0,0,0,0) 50%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    padding: 2rem;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: 5%;
+}
+
+.hero-title {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--gear-orange);
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+/* Style pour la sidebar des catégories */
+.category-sidebar .card-header {
+    background-color: var(--gear-dark) !important;
+}
+
+.list-group-item.active {
+    background-color: var(--gear-green);
+    border-color: var(--gear-green);
+}

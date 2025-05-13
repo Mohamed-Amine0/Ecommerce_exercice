@@ -1,0 +1,15 @@
+{% if messages %}
+<div class="messages-container position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    {% for message in messages %}
+    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header {% if message.tags %}bg-{{ message.tags }}{% endif %} text-white">
+            <strong class="me-auto">{% if message.tags == 'success' %}Succès{% elif message.tags == 'error' %}Erreur{% elif message.tags == 'warning' %}Attention{% elif message.tags == 'info' %}Information{% endif %}</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
