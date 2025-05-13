@@ -2,6 +2,10 @@
 
 GearEdge est une application e-commerce Django qui présente une boutique en ligne pour des équipements outdoor, multitools, accessoires EDC (Everyday Carry), éclairage et matériel de camping.
 
+[![GitHub license](https://img.shields.io/github/license/Mohamed-Amine0/Ecommerce_exercice)](https://github.com/Mohamed-Amine0/Ecommerce_exercice/blob/main/LICENSE)
+
+![GearEdge Banner](https://source.unsplash.com/random/1200x400/?outdoor,gear)
+
 ## Fonctionnalités
 
 ### Implémentées
@@ -21,16 +25,15 @@ GearEdge est une application e-commerce Django qui présente une boutique en lig
 - ⏳ Avis et notes sur les produits
 - ⏳ Filtrage et tri avancés des produits
 
-## Technologies utilisées
+## 🛠️ Technologies utilisées
 
-- Django 5.2
-- Bootstrap 5
-- FontAwesome
-- JavaScript
-- HTML5 / CSS3
-- SQLite (développement)
+- **Backend**: Django 5.2
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
+- **Icônes**: FontAwesome
+- **Base de données**: SQLite (développement)
+- **Déploiement**: *(à venir)*
 
-## Structure du projet
+## 🧩 Structure du projet
 
 ```
 ecommerce/              # Projet principal Django
@@ -53,24 +56,66 @@ ecommerce/              # Projet principal Django
 └── templates/          # Templates de base partagés
 ```
 
-## Installation
+## 🚀 Installation
 
 1. Cloner le dépôt
-2. Créer un environnement virtuel: `python -m venv env`
-3. Activer l'environnement: `env\Scripts\activate` (Windows) ou `source env/bin/activate` (Linux/Mac)
-4. Installer les dépendances: `pip install -r requirements.txt`
-5. Effectuer les migrations: `python manage.py migrate`
-6. Charger les données de démo: `python manage.py loaddata categories sample_products`
-7. Lancer le serveur: `python manage.py runserver`
+   ```bash
+   git clone https://github.com/Mohamed-Amine0/Ecommerce_exercice.git
+   cd Ecommerce_exercice
+   ```
 
-## Screenshots
+2. Créer et activer un environnement virtuel
+   ```bash
+   # Windows
+   python -m venv env
+   env\Scripts\activate
 
-*Screenshots à venir*
+   # Linux/Mac
+   python -m venv env
+   source env/bin/activate
+   ```
 
-## Auteurs
+3. Installer les dépendances
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Effectuer les migrations
+   ```bash
+   python manage.py migrate
+   ```
+
+5. Charger les données de démo
+   ```bash
+   python manage.py loaddata categories sample_products
+   ```
+
+6. Lancer le serveur
+   ```bash
+   python manage.py runserver
+   ```
+
+7. Ouvrir votre navigateur à l'adresse http://127.0.0.1:8000/
+
+## 📸 Screenshots
+
+### Page d'accueil
+![Page d'accueil](image.png)
+
+### Détail produit
+![Détail produit](image-1.png)
+
+### Panier d'achat
+![Panier](image-2.png)
+
+## 👥 Comment contribuer
+
+Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour savoir comment contribuer au projet.
+
+## 👨‍💻 Auteurs
 
 - Team GearEdge
 
-## Licence
+## 📄 Licence
 
-Ce projet est sous licence MIT.
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
